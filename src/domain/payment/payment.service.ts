@@ -83,9 +83,6 @@ export class PaymentService {
       const paymentLink = await res.data;
       console.log(link);
       console.log("paymentLink", paymentLink);
-      // paymentData._param_month = paymentData.chatPeriod;
-      // paymentData._param_first_name = paymentData.first_name;
-      // paymentData._param_last_name = paymentData.last_name;
       return paymentLink;
     } catch (error) {
       return console.log("Сервис онлайн платежей недоступен");
@@ -102,7 +99,6 @@ export class PaymentService {
     ////////
     const new_order = new Order({
       prodamus_order_id: callbackPaymentData.order_id,
-      // months_number: callbackPaymentData.
     });
   }
 
